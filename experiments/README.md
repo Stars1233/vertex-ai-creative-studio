@@ -8,6 +8,7 @@ We'd love to hear your feedback on these!
 
 Table of Contents
 
+* [Creative GenMedia Workflow](#creative-genmedia-workflow) - a Creative GenMedia workflow which takes various inputs to create prompts for Veo 3, plus allows a showcase of output videos.
 * [Veo Genetic Prompt Optimizer](#veo-genetic-prompt-optimizer) - an automated system that uses a genetic algorithm to evolve and refine high-level "metaprompts," that guides Gemini to generate superior, task-specific prompts for Google's Veo video generation model.
 * [VeoStart](#veostart) - a prompt creator assistant for Veo 2 & Veo 3
 * [MCP Tools for Genmedia](#mcp-tools-for-genmedia) - MCP Servers for Genmedia services
@@ -15,6 +16,14 @@ Table of Contents
 * [Creative Podcast Assistant](#creative-podcast-assistant) - a notebook example to create a podcast with genmedia services
 * [Arena](#arena---rate-images) - rate your images with in a visual arena
 * [Babel](#babel---chirp-3-hd-voices) - experiment with Chirp 3 HD voices
+
+## Creative GenMedia Workflow
+
+An end-to-end workflow demo that demonstrates how a series of interconnected AI tools can be orchestrated to produce high-quality, on-brand creative media. The demo does the following:
+- Takes initial inputs - product details, images, brand guidelines, and a simple brief - and transforms them into a concrete creative output: a detailed video prompt ready for generation with [Veo 3](https://cloud.google.com/vertex-ai/generative-ai/docs/models#veo-models).
+- Includes a showcase to display pre-made examples, which is crucial for demonstrating the final output without the delay of live video generation.
+
+See [Creative GenMedia Workflow demo](./creative-genmedia-workflow/)
 
 ## Veo Genetic Prompt Optimizer
 
