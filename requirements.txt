@@ -13,12 +13,6 @@ anyio==4.15.1
     #   starlette
 asttokens==3.0.2
     # via stack-data
-audioop-lts==0.2.2
-    # via
-    #   standard-aifc
-    #   standard-sunau
-audioread==3.1.0
-    # via librosa
 black==26.5.1
     # via vertex-ai-genmedia-creative-studio
 blinker==1.9.0
@@ -44,9 +38,10 @@ click==8.5.0
     #   black
     #   flask
     #   uvicorn
+cloudpickle==3.1.2
+    # via joblib
 colorama==0.4.6 ; sys_platform == 'win32'
     # via
-    #   click
     #   ipython
     #   pytest
     #   tqdm
@@ -62,10 +57,9 @@ cycler==0.12.1
     # via matplotlib
 decorator==5.3.1
     # via
-    #   ipython
     #   librosa
     #   moviepy
-deepdiff==9.1.0
+deepdiff==8.6.2
     # via mesop
 distro==1.9.0
     # via google-genai
@@ -108,7 +102,7 @@ google-auth==2.57.1
     #   google-cloud-tasks
     #   google-cloud-texttospeech
     #   google-genai
-google-cloud-aiplatform==1.165.1
+google-cloud-aiplatform==2.1.0
     # via vertex-ai-genmedia-creative-studio
 google-cloud-appengine-logging==1.10.0
     # via google-cloud-logging
@@ -171,7 +165,7 @@ grpcio==1.83.1
     #   googleapis-common-protos
     #   grpc-google-iam-v1
     #   grpcio-status
-grpcio-status==1.83.1
+grpcio-status==1.83.1 ; platform_python_implementation != 'PyPy'
     # via google-api-core
 gunicorn==26.2.0
     # via vertex-ai-genmedia-creative-studio
@@ -256,7 +250,7 @@ networkx==3.6.1
     # via scikit-image
 numba==0.67.0
     # via librosa
-numpy==2.5.2
+numpy==2.5.3
     # via
     #   contourpy
     #   imageio
@@ -278,7 +272,9 @@ numpy==2.5.2
 opencv-python==5.0.0.93
     # via vertex-ai-genmedia-creative-studio
 opentelemetry-api==1.44.0
-    # via google-cloud-logging
+    # via
+    #   google-api-core
+    #   google-cloud-logging
 orderly-set==5.5.0
     # via deepdiff
 packaging==26.3
@@ -286,13 +282,11 @@ packaging==26.3
     #   black
     #   google-cloud-aiplatform
     #   google-cloud-bigquery
-    #   gunicorn
     #   lazy-loader
     #   matplotlib
     #   pooch
     #   pytest
     #   scikit-image
-    #   wheel
 pandas==3.0.5
     # via vertex-ai-genmedia-creative-studio
 parso==0.8.7
@@ -333,7 +327,7 @@ proto-plus==1.28.4
     #   google-cloud-resource-manager
     #   google-cloud-tasks
     #   google-cloud-texttospeech
-protobuf==7.36.1
+protobuf==6.33.6
     # via
     #   google-api-core
     #   google-cloud-aiplatform
@@ -349,7 +343,7 @@ protobuf==7.36.1
     #   grpcio-status
     #   mesop
     #   proto-plus
-psutil==7.2.2 ; sys_platform != 'emscripten'
+psutil==7.2.2 ; sys_platform != 'cygwin' and sys_platform != 'emscripten'
     # via ipython
 ptyprocess==0.7.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
     # via pexpect
@@ -367,7 +361,7 @@ pydantic==2.13.5
     #   google-cloud-aiplatform
     #   google-genai
     #   mesop
-pydantic-core==2.48.0
+pydantic-core==2.46.5
     # via pydantic
 pygments==2.21.0
     # via
@@ -377,15 +371,11 @@ pygments==2.21.0
 pyjwt==2.13.0
     # via firebase-admin
 pyopenssl==26.4.0
-    # via
-    #   google-auth
-    #   vertex-ai-genmedia-creative-studio
+    # via vertex-ai-genmedia-creative-studio
 pyparsing==3.3.2
     # via matplotlib
 pytest==9.1.1
-    # via
-    #   c2pa-python
-    #   vertex-ai-genmedia-creative-studio
+    # via vertex-ai-genmedia-creative-studio
 python-dateutil==2.9.0.post0
     # via
     #   google-cloud-bigquery
@@ -419,8 +409,6 @@ scipy==1.18.1
     #   scikit-image
     #   scikit-learn
     #   vertex-ai-genmedia-creative-studio
-setuptools==84.0.0
-    # via c2pa-python
 shortuuid==1.0.13
     # via vertex-ai-genmedia-creative-studio
 six==1.17.0
@@ -433,16 +421,6 @@ soxr==1.1.0
     # via librosa
 stack-data==0.6.3
     # via ipython
-standard-aifc==3.13.0
-    # via
-    #   audioread
-    #   librosa
-standard-chunk==3.13.0
-    # via standard-aifc
-standard-sunau==3.13.0
-    # via
-    #   audioread
-    #   librosa
 starlette==1.6.0
     # via fastapi
 tenacity==9.1.4
@@ -463,11 +441,11 @@ traitlets==5.16.1
     #   matplotlib-inline
 typing-extensions==4.16.0
     # via
+    #   anyio
     #   fastapi
     #   google-cloud-aiplatform
     #   google-genai
     #   grpcio
-    #   librosa
     #   opentelemetry-api
     #   pydantic
     #   pydantic-core
@@ -487,11 +465,9 @@ watchdog==6.0.0
     # via mesop
 wcwidth==0.8.3
     # via prompt-toolkit
-websockets==17.1
+websockets==16.1.1
     # via google-genai
 werkzeug==3.1.8
     # via
     #   flask
     #   mesop
-wheel==0.48.0
-    # via c2pa-python
